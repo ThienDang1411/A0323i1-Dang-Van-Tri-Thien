@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhapvao">
+<select name="" id="select1">
+    <option value="a">VNĐ</option>
+    <option value="b">USD</option>
+</select>
+<select name="" id="select2">
+    <option value="a">VNĐ</option>
+    <option value="b">USD</option>
+</select>
+<button onclick="chuyenDoi()">ketqua</button>
+<script>
+    function chuyenDoi() {
+        let n = document.getElementById("nhapvao").value;
+        let select1 = document.getElementById('select1').value;
+        let select2 = document.getElementById('select2').value;
+        if (select1 == select2){
+            alert(n);
+        }
+        if (select1 == "a" && select2 == "b"){
+            alert(n/24000);
+        }
+        if (select1 == "b" && select2 == "a"){
+            alert(n*24000);
+        }
+    }
+</script>
+</body>
+</html>

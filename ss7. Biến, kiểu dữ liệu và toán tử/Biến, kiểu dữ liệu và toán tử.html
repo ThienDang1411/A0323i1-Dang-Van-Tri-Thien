@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<--Tinh Tong & DTB--><br>
+<input type="text" id="Ly" placeholder="Nhap diem Ly">
+<input type="text" id="Hoa" placeholder="Nhap diem Hoa">
+<input type="text" id="Sinh" placeholder="Nhap diem Sinh">
+<button type="button" onclick="avg()">Ket qua</button>
+<p id="Tong"></p>
+<p id="avg"></p>
+<hr>
+<--Doi doC sang doF--><br>
+<input type="text" id="doC" placeholder="nhap do C">
+<button type="button" onclick="F()">Ket qua</button>
+<p id="doF"></p>
+<hr>
+<--Tinh chu vi & dien tich hinh tron--><br>
+<input type="text" id="BK" placeholder="nhap ban kinh">
+<button type="button" onclick="DTS()">Ket qua</button>
+<p id="S"></p>
+<p id="C"></p>
+
+</body>
+</html>
+<script>
+    function avg() {
+        var a = +document.getElementById("Ly").value;
+        var b = +document.getElementById("Hoa").value;
+        var c = +document.getElementById("Sinh").value;
+        document.getElementById("Tong").innerHTML = "Tong diem" + (a+b+c);
+        document.getElementById("avg").innerHTML = "DTB:" + (a+b+c)/3;
+    }
+    function F() {
+        var C = +document.getElementById("doC").value;
+        document.getElementById("doF").innerHTML = "DoF: " + (C*9/5+32);
+    }
+    function DTS(){
+        var R = document.getElementById("BK").value;
+        document.getElementById("S").innerHTML = "Dien Tich hinh tron: " + (3.14*R*R);
+        document.getElementById("C").innerHTML = "Chu Vi hinh tron: " + (2*3.14*R);
+    }
+</script>
