@@ -3,31 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        th{
+            padding-right: 30px;
+        }
+        #button{
+            margin-top: 20px;
+            height: 27px;
+            width: 80px;
+            background: #8F82CF;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+            border-color: #A2C4FD;
+        }
+        select{
+            min-height: 25px;
+            min-width: 120px;
+        }
+        #nhap{
+            height: 20px;
+        }
+    </style>
 </head>
 <body>
-<input type="text" id="nhapvao">
-<select name="" id="select1">
-    <option value="a">VNĐ</option>
-    <option value="b">USD</option>
-</select>
-<select name="" id="select2">
-    <option value="a">VNĐ</option>
-    <option value="b">USD</option>
-</select>
-<button onclick="chuyenDoi()">ketqua</button>
+<form>
+    <table>
+        <tr>
+            <th>
+                <label>Amount</label><br>
+                <input type="text" id="nhap">
+            </th>
+            <th>
+                <label>From Currency</label><br>
+                <select name="" id="select2">
+                    <option value="a">VNĐ</option>
+                    <option value="b">USD</option>
+                </select>
+            </th>
+            <th>
+                <label>To Currency</label><br>
+                <select name="" id="select1">
+                    <option value="a">VNĐ</option>
+                    <option value="b">USD</option>
+                </select>
+            </th>
+            <th>
+                <input type="button" id="button" onclick="chuyenDoi()" value="Convert">
+            </th>
+        </tr>
+    </table>
+    <p id="hienthi"></p>
+</form>
+
 <script>
     function chuyenDoi() {
-        let n = document.getElementById("nhapvao").value;
+        let n = document.getElementById("nhap").value;
         let select1 = document.getElementById('select1').value;
         let select2 = document.getElementById('select2').value;
-        if (select1 == select2){
-            alert(n);
-        }
         if (select1 == "a" && select2 == "b"){
-            alert(n/24000);
+            document.getElementById("hienthi").innerHTML = "Result: "+ n/23000 + " VND";
         }
         if (select1 == "b" && select2 == "a"){
-            alert(n*24000);
+            document.getElementById("hienthi").innerHTML = "Result: "+ n*23000 + " USD";
         }
     }
 </script>
