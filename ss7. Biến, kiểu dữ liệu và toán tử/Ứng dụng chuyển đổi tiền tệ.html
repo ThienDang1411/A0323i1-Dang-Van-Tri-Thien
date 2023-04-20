@@ -37,16 +37,16 @@
             </th>
             <th>
                 <label>From Currency</label><br>
-                <select name="" id="select2">
-                    <option value="a">VNĐ</option>
-                    <option value="b">USD</option>
+                <select name="" id="select1">
+                    <option value="23000">VNĐ</option>
+                    <option value="1">USD</option>
                 </select>
             </th>
             <th>
                 <label>To Currency</label><br>
-                <select name="" id="select1">
-                    <option value="a">VNĐ</option>
-                    <option value="b">USD</option>
+                <select name="" id="select2">
+                    <option value="23000">VNĐ</option>
+                    <option value="1">USD</option>
                 </select>
             </th>
             <th>
@@ -56,18 +56,13 @@
     </table>
     <p id="hienthi"></p>
 </form>
-
 <script>
     function chuyenDoi() {
         let n = document.getElementById("nhap").value;
         let select1 = document.getElementById('select1').value;
         let select2 = document.getElementById('select2').value;
-        if (select1 == "a" && select2 == "b"){
-            document.getElementById("hienthi").innerHTML = "Result: "+ n/23000 + " VND";
-        }
-        if (select1 == "b" && select2 == "a"){
-            document.getElementById("hienthi").innerHTML = "Result: "+ n*23000 + " USD";
-        }
+        let result = (n*select2)/select1;
+        document.getElementById("hienthi").innerHTML=result;
     }
 </script>
 </body>
