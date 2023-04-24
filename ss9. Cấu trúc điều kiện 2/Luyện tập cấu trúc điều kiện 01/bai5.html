@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp Hạng Học Lực</title>
+</head>
+<body>
+<script>
+    let diemkiemtra = +prompt("Nhập Điểm Kiểm Tra");
+    let diemgiuaky = +prompt("Nhập Điểm Giữa Kỳ");
+    let diemcuoiky = +prompt("Nhập Điểm Cuối Kỳ");
+    let ketqua = (diemkiemtra + diemgiuaky + diemcuoiky) / 3;
+    if (ketqua < 5){
+        alert("Điểm Của Bạn Là " + ketqua + " Học lực ");
+    }else if (ketqua >= 5) {
+        alert("Điểm Của Bạn Là " + ketqua + " Học Lực TRUNG BÌNH");
+    }else if (ketqua >= 6.5){
+        alert("Điểm Của Bạn Là " + ketqua + " Học lực Khá");
+    }else if (ketqua >= 8){
+        alert("Điểm Của Bạn Là " + ketqua + " Học Lực Giỏi");
+    }
+</script>
+</body>
+</html>

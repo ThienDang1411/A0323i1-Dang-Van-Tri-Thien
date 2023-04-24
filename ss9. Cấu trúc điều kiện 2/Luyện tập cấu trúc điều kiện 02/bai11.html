@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let TN = +prompt('Nhap so thu nhap thang')
+    let b1 = TN*0.05
+    let b2 = TN*0.1-0.25
+    let b3 = TN*0.15-0.75
+    let b4 = TN*0.20-1.65
+    let b5 = TN*0.25-3.25
+    let b6 = TN*0.30-5.85
+    let b7 = TN*0.35-9.85
+    if (TN<=5)
+        document.write('Tien sau khi nop the: '+b1+' vnd');
+    else if (5<TN && TN<=10)
+        document.write('Tieng sau khi nop thue: '+b2+'tr vnd');
+    else if (10<TN && TN<=18)
+        document.write('Tien sau khi nop the: '+b3+'tr vnd');
+    else if (18<TN && TN<=32)
+        document.write('Tien sau khi nop the: '+b4+'tr vnd');
+    else if (32<TN && TN<=52)
+        document.write('Tien sau khi nop the: '+b5+'tr vnd');
+    else if (52<TN && TN<=80)
+        document.write('Tien sau khi nop the: '+b6+'tr vnd');
+    else if (TN>80)
+        document.write('Tien sau khi nop the: '+b7+'tr vnd');
+</script>
+</body>
+</html>

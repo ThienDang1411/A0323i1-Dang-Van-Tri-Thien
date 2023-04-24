@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sophut = +prompt('nhap so phut goi trong thang')
+    let phicodinh= 25000
+
+    if (sophut>200){
+        let phi = (sophut-200)*200+150*400+50*600
+        document.write('phi = \n'+ phi)
+        let tong = phi+phicodinh
+        document.write('\n so tien dien thoai phai nop la = ' + tong)
+    }
+    else if (sophut>50) {
+        let phi = (sophut-50)*400+50*600
+        document.write('phi = \n'+ phi)
+        let tong = phi+phicodinh
+        document.write('\n so tien dien thoai phai nop la = ' + tong)
+    }
+    else {
+        let phi = sophut*600
+        document.write('phi = \n'+ phi)
+        let tong = phi+phicodinh
+        document.write('\n so tien dien thoai phai nop la = ' + tong)
+    }
+
+
+</script>
+</body>
+</html>

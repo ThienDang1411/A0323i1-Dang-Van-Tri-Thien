@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let L = +prompt('nhap luong dien tieu thu (kWh)')
+    let b1 = L*1678
+    let b2 = L*1734
+    let b3 = L*2014
+    let b4 = L*2536
+    let b5 = L*2834
+    let b6 = L*2927
+    if (0<L && L<=50)
+        document.write('Tong so tien dien: '+b1+'vnd');
+    else if (51<L && L<=100)
+        document.write('Tong so tien dien: '+b2+'vnd');
+    else if (101<L && L<=200)
+        document.write('Tong so tien dien: '+b3+'vnd');
+    else if (201<L && L<=300)
+        document.write('Tong so tien dien: '+b4+'vnd');
+    else if (301<L && L<=400)
+        document.write('Tong so tien dien: '+b5+'vnd');
+    else if (400<L)
+        document.write('Tong so tien dien: '+b6+'vnd');
+</script>
+</body>
+</html>

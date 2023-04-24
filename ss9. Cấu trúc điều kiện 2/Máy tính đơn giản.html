@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính đơn giản</title>
+</head>
+<body>
+<form>
+    <table style="border-style: solid;border-color: #111111" >
+        <tr>
+            <th colspan="4"><input type="text" id="thanhhienthi" style="color: blue; outline: none"></th>
+        </tr>
+        <tr>
+            <td><button type="button" id="mot" onclick="submit1()">1</button></td>
+            <td><button type="button" id="hai" onclick="submit2()">2</button></td>
+            <td><button type="button" id="ba" onclick="submit3()">3</button></td>
+            <td><button type="button"  onclick="cong()" value="+">+</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" id="bon" onclick="submit4()">4</button></td>
+            <td><button type="button" id="nam" onclick="submit5()">5</button></td>
+            <td><button type="button" id="sau" onclick="submit6()">6</button></td>
+            <td><button type="button" onclick="tru()">-</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" id="bay" onclick="submit7()">7</button></td>
+            <td><button type="button" id="tam" onclick="submit8()">8</button></td>
+            <td><button type="button" id="chin" onclick="submit9()">9</button></td>
+            <td><button type="button"  onclick="nhan()">x</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="xoa()">C</button></td>
+            <td><button type="button" id="khong" onclick="submit0()">0</button></td>
+            <td><button type="button" id="bang" onclick="tinh()">=</button></td>
+            <td><button type="button"  onclick="chia()">/</button></td>
+        </tr>
+    </table>
+</form>
+<script>
+    function submit0() {
+        document.getElementById('thanhhienthi').value += 0;
+    }
+    function submit1() {
+        document.getElementById("thanhhienthi").value += 1;
+    }
+    function submit2() {
+        document.getElementById("thanhhienthi").value += 2;
+    }
+
+    function submit3() {
+        document.getElementById("thanhhienthi").value += 3;
+    }
+
+    function submit4() {
+        document.getElementById("thanhhienthi").value += 4;
+    }
+
+    function submit5() {
+        document.getElementById("thanhhienthi").value += 5;
+    }
+
+    function submit6() {
+        document.getElementById("thanhhienthi").value += 6;
+    }
+
+    function submit7() {
+        document.getElementById("thanhhienthi").value += 7;
+    }
+
+    function submit8() {
+        document.getElementById("thanhhienthi").value += 8;
+    }
+
+    function submit9() {
+        document.getElementById("thanhhienthi").value += 9;
+    }
+
+    function cong() {
+        document.getElementById("thanhhienthi").value += "+";
+    }
+    function xoa() {
+        document.getElementById("thanhhienthi").value = "";
+    }
+    function tru() {
+        document.getElementById("thanhhienthi").value += "-";
+    }
+    function nhan() {
+        document.getElementById("thanhhienthi").value += "*";
+    }
+    function chia() {
+        document.getElementById("thanhhienthi").value += "/";
+    }
+    function tinh() {
+        var text = document.getElementById("thanhhienthi").value;
+        var result = eval(text);
+        document.getElementById("thanhhienthi").value = result;
+    }
+</script>
+<style>
+    button{
+        width: 30px;
+        height: 25px;
+        color: blue;
+    }
+    td{
+        text-align: center;
+    }
+</style>
+</body>
+</html>

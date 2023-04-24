@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap">
+<button onclick="month()">tinh so ngay</button>
+<p id="demo"></p>
+<script>
+    function month(){
+        let month = parseFloat(document.getElementById("nhap").value);
+        switch (month) {
+            case 1:
+            case 3:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("demo").innerHTML="thang "+month+" co 31 ngay";
+                break;
+            case 2:
+                document.getElementById("demo").innerHTML="thang "+month+" co 28 or 29 ngay";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById("demo").innerHTML="thang "+month+" co 30 ngay";
+                break;
+            default:
+                document.getElementById("demo").innerText="nhap chua dung";
+        }
+    }
+
+</script>
+</body>
+</html>
