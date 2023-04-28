@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>từ 1 đến 100 ở số 99 thì hiển thị hộp thoại thông báo hoàn thành</title>
+</head>
+<body>
+<script>
+    var i;
+    for (i = 1; i <=100; i++) {
+        if (i%3===0 && i%5===0){
+            document.write('(FizzBuzz) ')
+        }
+        else if (i%5===0){
+            document.write('(buzz) ')
+        }
+        else if(i%3===0){
+            document.write('(fizz) ')
+        }
+        document.write(i + "<br>")
+    }
+</script>
+</body>
+</html>

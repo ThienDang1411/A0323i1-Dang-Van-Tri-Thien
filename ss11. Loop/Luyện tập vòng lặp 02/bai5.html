@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m= +prompt('nhap so tien goc');
+    let r=0.15;
+    let n= +prompt('so thang vay');
+    let T;
+
+    for (let i = 0; i <= n; i++) {
+        T=m*Math.pow((1+r),i);
+        document.write("thang thu " + i  + " la: " + parseInt(Math.round(T)) + "<br>");
+    }
+</script>
+</body>
+</html>

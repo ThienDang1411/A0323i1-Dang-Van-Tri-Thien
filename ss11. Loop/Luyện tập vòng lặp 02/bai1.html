@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let n = +prompt("Nhập số lượng số Finonacci vào đây:");
+    let fn;
+    let fn1 = 0;
+    let fn2= 1;
+    document.write(parseFloat("0")+"<br>")
+    for (let i = 0 ;i < n ; i++){
+        fn=fn1+fn2;
+        fn2=fn1;
+        fn1=fn;
+        document.write(fn + "<br>")
+    }
+</script>
+</body>
+</html>

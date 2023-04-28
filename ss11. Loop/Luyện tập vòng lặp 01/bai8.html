@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Đoán Số</title>
+</head>
+<body>
+<button  type="button" id="play"onclick="play() ">Play</button>
+<script>
+
+    function play() {
+        let nhap;
+        let random = Math.floor(Math.random()*10);
+
+        do {
+            nhap =  +prompt("Đoán số của bạn trong khoản 1 đến 100:");
+            if (nhap > random){
+                alert("Chọn số bé hơn")
+            }else if (nhap < random){
+                alert("Chọn số lớn hơn")
+            }else {
+                alert("chúc mừng và kết thúc lượt chơi")
+                break;
+            }
+        }while (nhap>random || nhap<random)
+    }
+</script>
+</body>
+</html>

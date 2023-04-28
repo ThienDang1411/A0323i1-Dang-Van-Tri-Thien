@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+    var i= 0;
+    var speed =50;
+    setTimeout(display);
+        function display() {
+            if(i<100){
+            document.getElementById("demo").innerHTML += i+"</br>";
+            i++
+            setTimeout(display,speed);
+        }if(i>99){
+                alert("END")
+            }
+    }
+</script>
+
+</body>
+</html>
