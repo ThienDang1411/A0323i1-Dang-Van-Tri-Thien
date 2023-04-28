@@ -6,17 +6,16 @@
 </head>
 <body>
 <script>
-    let f1 = 0;
-    let f2 = 1;
-    let f3;
-    document.write('0<br>')
-    for (let i = 0 ;i <= 20 ; i++){
-        f3=f1+f2;
-        f1 = f2;
-        f2=f3;
-        if (f1%5==0){
-            document.write(f1 + "<br>")
-        }
+    let m = parseInt(+prompt("nhap chieu dai"))
+    let n = parseInt(+prompt("nhap chieu rong"))
+    for (let i=0; i<m; i++){
+        for (let j=0; j<n; j++){
+            if (i==0 || j==0 || i==m-1||j==n-1){
+                document.write("*")
+            }else {
+                document.write("&nbsp&nbsp")
+            }
+        }document.write("<br>")
     }
 </script>
 </body>
