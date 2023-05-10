@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập một chuỗi vào đây");
+    let x = [n];
+    let a = "";
+    for (let i of x) {
+        if (i == i.toLowerCase()) {
+            a = a + i.toUpperCase();
+        } else {
+            a = a + i.toLowerCase();
+        }
+    }
+    document.write(a);
+
+</script>
+</body>
+</html>

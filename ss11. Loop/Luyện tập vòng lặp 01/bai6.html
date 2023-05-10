@@ -6,18 +6,19 @@
 </head>
 <body>
 <script>
+    debugger
     var i=0;
     var tong = 0;
     var dem = 0;
     while (dem<30){
         if (i%7==0){
-            dem+=1;
             tong+=i;
             document.write(i+",")
+            dem++
         }
-        i+=1;
+        i++;
     }
-    document.write("tổng của 30 số chia hết cho 7 đầu tiên: "+tong);
+    document.write("<br>"+"tổng của 30 số chia hết cho 7 đầu tiên: "+tong);
 
 </script>
 </body>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt('nhap chuoi thu 1: ');
+    let n1 = prompt('nhap chuoi thu 2: ');
+    let flag = true;
+    if (n.length !== n1.length){
+        document.write('2 chuoi khac nhau')
+        flag=false
+    }
+    else {
+    for (let i = 0; i <n.length ; i++) {
+        n.charAt(i)
+        if (n.charAt(i) !== n1.charAt(i)){
+            document.write('2 chuoi khac nhau');
+            flag=false
+            break
+        }
+    }
+    }
+    if (flag === true){
+        document.write('2 chuoi giong nhau')
+    }
+</script>
+</body>
+</html>
