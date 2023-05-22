@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="area()">area</button>
+<button type="button" onclick="circum()">circum</button>
+<p id="hienthi"></p>
+<script>
+    let radius = +prompt("nhap ban kinh")
+    function area() {
+         document.getElementById("hienthi").innerText="Dien tich hinh chon la: "+radius*radius*3,14
+
+    }
+    function circum() {
+        document.getElementById("hienthi").innerText="CHu vi hinh chon la: "+radius*2*3,14
+    }
+</script>
+</body>
+</html>

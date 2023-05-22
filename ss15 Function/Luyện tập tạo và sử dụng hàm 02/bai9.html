@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhap chuoi ky tu");
+    let str = n.toString();
+    let result = [];
+    let dem=0
+    let flag=false
+    function check() {
+        let nhap = prompt('check ky tu')
+        for(let i=0; i<str.length; i++) {
+            result.push(str[i])
+            if (nhap === str[i] && str.indexOf(nhap) !== -1){
+                dem++
+                flag=true;
+
+            }
+
+        }
+        document.write(result+'<br>'+" co "+ dem + " ky trong mang");
+
+        if (flag=false){
+            document.write('ko co ky tu nay trong mang');
+        }
+    }check()
+</script>
+</body>
+</html>
