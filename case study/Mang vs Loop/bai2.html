@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=[7,2,5,4,6,3,5,3];
+    let b=[7,2,5,3,5,3];
+    let c=[];
+    document.write(a);
+    document.write('<br>')
+    document.write(b);
+    document.write('<br>')
+    for (let i = 0; i <b.length ; i++) {
+        if (a.indexOf(b[i]) === -1 && c.indexOf(b[i] === -1)) {
+            c.push(b[i]);
+        }
+    }
+        for (let i = 0; i <a.length ; i++) {
+        if (b.indexOf(a[i]) === -1 && c.indexOf(a[i] === -1)){
+            c.push(a[i])
+        }
+    }document.write('Missing Value:' + c);
+
+
+</script>
+</body>
+</html>

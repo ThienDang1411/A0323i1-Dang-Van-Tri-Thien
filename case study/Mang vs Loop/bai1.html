@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let n = +prompt("nhap do dai mang");
+    for (let i = 0; i < n; i++) {
+        a[i]= +prompt('nhap gia tri tung phan tu')
+    }
+    let b = [];
+    let sum = 0;
+    for (let j = 0; j < a.length; j++) {
+        sum += a[j];
+        b.push(sum)
+    }
+    document.write(b)
+</script>
+</body>
+</html>

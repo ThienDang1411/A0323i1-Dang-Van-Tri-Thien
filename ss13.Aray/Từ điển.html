@@ -10,15 +10,15 @@
 <p id="hienthi"></p>
 <script>
     function dich() {
-        let tratu = document.getElementById('lang').value;
+        let traTu = document.getElementById('lang').value;
         let vn = ['xin chào', 'tam biệt', 'hẹn gặp lại']
         let en = ['hi', 'goodbye', 'see you soon']
-        for (let i=0; i<vn.length; i++ ){
-            if (tratu === vn[i]){
+        for (let i = 0; i < vn.length; i++) {
+            if (traTu === vn[i]) {
                 document.getElementById("hienthi").innerText = "nghia tu tieng anh nay la: " + en[i];
                 break
-            }else{
-                    document.getElementById('hienthi').innerText = "khong thay tu nay";
+            } else {
+                document.getElementById('hienthi').innerText = "khong thay tu nay";
             }
 
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="change()">Nhap</button>
+<script>
+    class Rectangle {
+        constructor(length,width) {
+            this.length = length;
+            this.width = width;
+        }
+        circum(){
+            document.write("Chu vi hinh chu nhat la: "+ (this.length + this.width)*2+"<br>");
+        }
+        area(){
+            document.write("Dien tich hinh chu nhat la: "+ this.length*this.width);
+        }
+        setLenght(newLength){
+            this.length = newLength;
+        }
+        setWidth(newWidth){
+            this.width = newWidth;
+        }
+
+    }
+    let length = +prompt("Nhập chiều dài");
+    let width = +prompt("Nhập chiều rộng");
+    let rectangle = new Rectangle(length,width);
+    rectangle.circum(length,width);
+    rectangle.area(length,width);
+    function change(){
+        let length = +prompt("Nhập chiều dài");
+        let width = +prompt("Nhập chiều rộng");
+        rectangle.setLenght(length);
+        rectangle.setWidth(width);
+        rectangle.circum(length,width);
+        rectangle.area(length,width);
+    }
+
+</script>
+
+</body>
+</html>

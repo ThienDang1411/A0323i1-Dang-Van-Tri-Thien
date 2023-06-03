@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>"Sau khi an mot mieng tao can nang tang : " <span id="humanweight"></span> " So tao con lai la: " <span id="appleweight"></span></p>
+<script>
+    class Apple {
+        constructor(weightApp) {
+            this.weightApp = weightApp;
+        }
+
+        decrease() {
+            this.weightApp = this.weightApp - 1;
+        }
+
+        isEmpty() {
+            return this.status;
+        }
+
+        getWeightApp() {
+            return this.weightApp;
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weightHuman) {
+            this.name = name;
+            this.gender = gender;
+            this.weightHuman = 60;
+        }
+
+        isMale() {
+
+        }
+
+        setGender() {
+
+        }
+
+        checkApple(Apple) {
+            if (app){
+
+            }
+        }
+
+        eat(apple) {
+            this.say("tao co ve ngon an thoi")
+            if (apple.getWeightApp() > 0) {
+                this.weightHuman = this.weightHuman += 1;
+                apple.decrease();
+                document.getElementById("appleweight").innerText = apple.getWeightApp();
+                document.getElementById("humanweight").innerText = this.weightHuman;
+            }
+        };
+
+        say(text) {
+
+        }
+
+        getName() {
+
+        }
+
+        setName() {
+
+        }
+
+        getName() {
+
+        }
+
+        setWeightHuman() {
+
+        }
+    }
+
+    let app = new Apple(10);
+    let human = new Human();
+    human.getWeightApp(app);
+
+    function eat() {
+        human.eat(app);
+    };
+</script>
+<button type="button" onclick="eat()">An Tao</button>
+</body>
+</html>

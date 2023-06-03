@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let n = +prompt('nhap tien luong nhan vien')
+    let the;
+    let tiensauthue;
+
+    if (n>=15000000){
+        the=n*0.2;
+        tiensauthue= n-the;
+        document.write('tien sau thue la: ' + tiensauthue);
+    }
+    else if (n>7000000 && n<=15000000){
+        the=n*0.2;
+        tiensauthue= n-the;
+        document.write('tien sau thue la: ' + tiensauthue);
+    }
+    else if (n<7000000){
+        the=n*0.2;
+        tiensauthue= n-the;
+        document.write('tien sau thue la: ' + tiensauthue);
+    }
+</script>
 </body>
 </html>

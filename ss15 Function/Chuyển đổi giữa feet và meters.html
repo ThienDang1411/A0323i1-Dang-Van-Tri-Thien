@@ -6,19 +6,18 @@
 </head>
 <body>
 <script>
-    let feet = +prompt("nhap feet")
+    let foot = +prompt("nhap foot")
     function footToMeter(foot) {
         foot = foot * 0.305;
-        document.write('feet sang meter: '+foot+'<br>');
+        document.write('foot sang meter: '+foot+'<br>');
     }
-    footToMeter(feet);
-
     let meter = +prompt('nhap meter')
         function meterToFoot(meter) {
             meter = meter * 3.279;
           document.write('meter sang feet: '+ meter)
         }
-        meterToFoot(meter);
+    footToMeter(foot);
+    meterToFoot(meter);
 </script>
 </body>
 </html>

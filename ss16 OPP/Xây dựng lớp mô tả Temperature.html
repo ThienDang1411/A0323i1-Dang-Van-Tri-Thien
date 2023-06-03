@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(doC) {
+            this.doC = doC;
+        }
+        doF(){
+            document.write("do C sang do F la: " + (1.8*this.doC+32)+"<br>")
+        }
+        kenvin(){
+            document.write("do C sang do K la: " + (this.doC + 273.15))
+        }
+    }
+    let doC = +prompt("nhap do C")
+    let temperature = new Temperature(doC)
+    temperature.doF(doC)
+    temperature.kenvin(doC)
+</script>
+</body>
+</html>

@@ -16,17 +16,14 @@
         for(let i=0; i<str.length; i++) {
             result.push(str[i])
             if (nhap === str[i] && str.indexOf(nhap) !== -1){
+                flag=true
                 dem++
-                flag=true;
-
+            }else if (flag = false){
+                document.write('ko co ky tu nay')
             }
 
-        }
-        document.write(result+'<br>'+" co "+ dem + " ky trong mang");
+        }document.write(result+"<br>"+'co ' + dem + ' ky tu')
 
-        if (flag=false){
-            document.write('ko co ky tu nay trong mang');
-        }
     }check()
 </script>
 </body>
