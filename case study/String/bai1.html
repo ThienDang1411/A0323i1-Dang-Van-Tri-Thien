@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str="tRuong  TaN HAI";
+    let charArr = str.split("");
+
+    for (let i = 0; i <str.length ; i++) {
+        if (charArr[i]===charArr[i].toUpperCase()){
+            charArr[i]=charArr[i].toLowerCase();
+        }
+    }
+    document.write(charArr.join(""))
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s1=["a","a","b","c","c"]
+    let s2=["a","d","c","a","a"]
+    let array=[]
+    for (let i = 0; i <s1.length ; i++) {
+        for (let j = 0; j <s2.length ; j++) {
+            if (s1[i] === s2[j] && s1.indexOf(s2[j] != -1)){
+                array[j]=s2.splice(j,1);
+            }
+        }
+    }document.write(array.length);
+    document.write('<br>'+array)
+</script>
+</body>
+</html>

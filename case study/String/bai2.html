@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s = ["c","a","b","c","a","d","d","e","F"]
+    let array = [];
+    for (let i = 0; i < s.length ; i++) {
+        if (array.indexOf(s[i]) == -1){
+            array.push(s[i]);
+        }
+    }
+
+    document.write("Có " + array.length + " ký tự khác nhau là: " + array);
+
+</script>
+</body>
+</html>
