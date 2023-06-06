@@ -6,39 +6,40 @@
 </head>
 <body>
 <script>
-    let row= +prompt('Nhap hang')
-    let col= +prompt('Nhap cot')
-    let array=[];
-    for (let i = 0; i < row ; i++) {
-        array[i]=[];
-        document.write('<br>')
-        for (let j = 0; j < col ; j++) {
-            array[i][j]=Math.floor(Math.random()*10);
-            document.write(array[i][j]+' ')
+    let num = +prompt("Nhap hang");
+    let arr = [];
+    for (let i = 0; i < num; i++) {
+        arr[i] = [];
+        document.write("<br>")
+        for (let j = 0; j < num; j++) {
+            arr[i][j] = Math.floor(Math.random() * 10);
+            document.write(arr[i][j]);
         }
     }
-    function min(array){
-        let minnumber=array[0][0];
-        for (let i = 0; i <array.length ; i++) {
-            for (let j = 0; j < array.length; j++) {
-                if (minnumber>array[i][j]){
-                    minnumber=array[i][j];
+
+    function ktsnt(num) {
+        let flag = true;
+        if (num < 2) {
+            flag = false;
+        } else {
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    flag = false;
+                    break;
                 }
             }
-        }return minnumber;
+        }
+        return flag;
     }
-    function max(array) {
-        let maxnumber=array[0][0];
-        for (let i = 0; i <array.length ; i++) {
-            for (let j = 0; j <array.length ; j++) {
-                if (maxnumber<array[i][j]){
-                    maxnumber=array[i][j]
-                }
+    let count = 0;
+    for (let i = 0; i < num; i++) {
+        for (let j = 0; j < num; j++) {
+            if (ktsnt(arr[i][j])) {
+                count++;
             }
-        }return maxnumber
+        }
     }
-    document.write('<br>'+'So nho nhat trong mang la: ' + min(array));
-    document.write('<br>'+ 'So lon nhat trong mang la: ' + max(array));
+    document.write("<br>"+"Co " +count+ " so nguyen to trong mang");
 </script>
 </body>
 </html>
