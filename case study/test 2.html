@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+    <div id="svlist"></div>
+    <button type="submit" onclick="add(svlist)">Thêm mới học viên</button>
+    <button type="submit" onclick="fix(svlist)">Sửa thông tin học viên</button>
+    <button type="submit" onclick="deletee(svlist)">Xóa học viên</button>
+</div>
+
+</body>
+<script>
+    class Sinhvien {
+        constructor(id, name, lop, email, dateofbirth) {
+            this.id = id;
+            this.name = name;
+            this.lop = lop;
+            this.email = email;
+            this.dateofbirth = dateofbirth;
+        }
+    }
+    let sv1 = new Sinhvien('T','Tran Anh Tuan','A1222I1','trananhtuan@gmail.com','12/10/2003');
+    let sv2 = new Sinhvien('D','Dang Van Tri Thien','A1222I1','dangvantrithien@gmail.com','14/11/2002');
+    let svlist = [sv1,sv2];
+    display(svlist);
+    function display(lish) {
+        let table="<table border = '1' cellpadding='10' cellspacing='0'>"+
+            "<tr>" +
+            "<th>Ma Hoc Vien</th>"+
+            "<th>Ten</th>"+
+            "<th>Lop</th>"+
+            "<th>Mail</th>"+
+            "<th>Ngay sinh</th>"+
+
+            "</tr>"
+        for (let i = 0; i < svlist.length; i++) {
+            table+='<tr>'+
+                "<th>"+svlist[i].id+"</th>"+
+                "<th>"+svlist[i].name+"</th>"+
+                "<th>"+svlist[i].lop+"</th>"+
+                "<th>"+svlist[i].email+"</th>"+
+                "<th>"+svlist[i].dateofbirth+"</th>"+
+                '</tr>'
+        }
+        table +='</table>'
+        document.getElementById('svlist').innerHTML=table;
+    }
+    function add(svlist) {
+        let sv = new Sinhvien();
+        let n;
+        let flag=true;
+        do{
+            n=prompt('Nhap id muon them');
+            for (let i = 0; i < svlist.length ; i++) {
+                if (svlist[i].id===n){
+                    flag=true;
+                    alert('id trung')
+                    break
+                }else {
+                    flag=true;
+                }
+            }
+        }while (flag===false)
+        sv.id = n;
+        sv.name = prompt('Nhap Ho Ten');
+        sv.lop = prompt('Nhap lop');
+        sv.email = prompt('Nhap Mail');
+        sv.dateofbirth = prompt('Nhap Ngay Thang Nam sinh');
+        svlist.push(sv);
+        display(svlist);
+    }
+    function deletee(svlist) {
+        let check= prompt('Nhap id muon xoa')
+        for (let i = 0; i <svlist.length ; i++) {
+            if (svlist[i].id === check){
+                svlist.splice(i,1)
+                display(svlist);
+            }else {
+                alert('ko tim thay')
+            }
+        }
+    }
+    function fix(svlish) {
+        let checkid=prompt('nhap id muon update')
+        for (let i = 0; i < svlish.length; i++) {
+            if (svlish[i].id == checkid){
+                svlish[i].name=prompt('nhap ten')
+                svlish[i].lop=prompt('nhap lop')
+                svlish[i].email=prompt('nhap mail')
+                svlish[i].dateofbirth=prompt('nhap ngay sinh')
+                display(svlish);
+                break;
+            }else {
+                alert('id ko ton tai')
+            }
+        }
+    }
+
+</script>
+</html>

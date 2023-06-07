@@ -12,7 +12,8 @@
 <input type="email" id="email" placeholder="Enter email"><br>
 <input type="date" id="birthday" placeholder="Enter birthday"><br>
 <input type="text" id="module" placeholder="Enter module"><br>
-<button id="btn-add" style="display: none" onclick="addNew()">Add</button>
+<button id="btn-add" onclick="addNew()">Add</button>
+<button id="btn-edit" style="display: none" onclick="editEmployee()">Update</button>
 <p id="result"></p>
 <script>
     class Employee {
@@ -103,6 +104,7 @@
     function display(list) {
         let tableString = '<table border="1" style="border-collapse: collapse">\n' +
             '    <tr>\n' +
+            '        <th> # </th>\n' +
             '        <th> Mã học viên </th>\n' +
             '        <th> Tên </th>\n' +
             '        <th> Lớp </th>\n' +
@@ -114,27 +116,41 @@
             '    </tr>';
         for (let i = 0; i < list.length; i++) {
             tableString += '<tr>\n' +
+                '        <td>' + (i+1) + '</td>\n' +
                 '        <td>' + list[i].getId() + '</td>\n' +
                 '        <td>' + list[i].getName() + '</td>\n' +
                 '        <td>' + list[i].getLop() + '</td>\n' +
                 '        <td>' + list[i].getEmail() + '</td>\n' +
                 '        <td>' + list[i].getBirthday() + '</td>\n' +
                 '        <td>' + list[i].getModule() + '</td>\n' +
-                '        <td><button onclick="editStudent('+i+')">Edit</button></td>\n' +
+                '        <td><button onclick="showInfoEdit('+i+')">Edit</button></td>\n' +
                 '        <td><button onclick="deleteEmployee('+i+')">Delete</button></td>\n' +
                 '    </tr>'
         }
         tableString += '</table>'
         document.getElementById("result").innerHTML = tableString;
     }
-
-    function editStudent() {
+    let updateIndex = -1;
+    function editEmployee() {
         let editid = document.getElementById("id").value;
         let editname = document.getElementById("name").value;
         let editlop = document.getElementById("lop").value;
         let editemail = document.getElementById("email").value;
         let editbirthday = document.getElementById("birthday").value;
         let editmodule = document.getElementById("module").value;
+        employeeList[updateIndex].setId(editid);
+        employeeList[updateIndex].setName(editname);
+        employeeList[updateIndex].setLop(editlop);
+        employeeList[updateIndex].setEmail(editemail);
+        employeeList[updateIndex].setBirthday(editbirthday);
+        employeeList[updateIndex].setModule(editmodule);
+        document.getElementById("id").value="";
+        document.getElementById("name").value="";
+        document.getElementById("lop").value="";
+        document.getElementById("email").value="";
+        document.getElementById("birthday").value="";
+        document.getElementById("module").value="";
+        display(employeeList);
     }
 
     function deleteEmployee(index) {
@@ -153,6 +169,18 @@
             document.getElementById("nameError").innerText =""
             document.getElementById("btn-add").style.display ="inline"
         }
+
+    }
+    function showInfoEdit(index) {
+        updateIndex=index;
+        document.getElementById("id").value=employeeList[index].getId();
+        document.getElementById("name").value=employeeList[index].getName();
+        document.getElementById("lop").value=employeeList[index].getLop();
+        document.getElementById("email").value=employeeList[index].getEmail();
+        document.getElementById("birthday").value=employeeList[index].getBirthday();
+        document.getElementById("module").value=employeeList[index].getModule();
+        document.getElementById("btn-add").style.display="none";
+        document.getElementById("btn-edit").style.display="inline";
     }
 </script>
 </body>
